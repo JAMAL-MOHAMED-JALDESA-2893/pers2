@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Department_All_Report" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb908c85-03e9-46b7-aac1-47afe0bf59d9">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="HR"/>
+    <parameter name="year" class="java.lang.String"/>
+    <parameter name="department_id" class="java.lang.String"/>
+    <parameter name="Department_Name" class="java.lang.String"/>
+    <parameter name="month" class="java.lang.String"/>
+    <queryString language="SQL">
+        <![CDATA[SELECT  `job_group`,  `first_name`, `last_name`, `middle_name`, `personal_phone`, `personal_email`, `work_mail`, `national_id`, `bank_name`, `bank_account`, `kra_no`, salary.* from `employee_entity` LEFT OUTER join `salary` on employee_entity.id= salary.employee_id WHERE salary.year = $P{year} AND salary.department_id = $P{department_id} AND salary.month = $P{month}]]>
+    </queryString>
+    <field name="job_group" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="job_group"/>
+        <property name="com.jaspersoft.studio.field.label" value="job_group"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="first_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="first_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="first_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="last_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="last_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="last_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="middle_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="middle_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="personal_phone" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="personal_phone"/>
+        <property name="com.jaspersoft.studio.field.label" value="personal_phone"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="personal_email" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="personal_email"/>
+        <property name="com.jaspersoft.studio.field.label" value="personal_email"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="work_mail" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="work_mail"/>
+        <property name="com.jaspersoft.studio.field.label" value="work_mail"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="national_id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="national_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="national_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="bank_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="bank_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="bank_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="bank_account" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="bank_account"/>
+        <property name="com.jaspersoft.studio.field.label" value="bank_account"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="kra_no" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="kra_no"/>
+        <property name="com.jaspersoft.studio.field.label" value="kra_no"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="advanced_deductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="advanced_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="advanced_deductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="allowance_custom" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="allowance_custom"/>
+        <property name="com.jaspersoft.studio.field.label" value="allowance_custom"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="allowance_field" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="allowance_field"/>
+        <property name="com.jaspersoft.studio.field.label" value="allowance_field"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="allowance_overtime" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="allowance_overtime"/>
+        <property name="com.jaspersoft.studio.field.label" value="allowance_overtime"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="allowance_per_deam" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="allowance_per_deam"/>
+        <property name="com.jaspersoft.studio.field.label" value="allowance_per_deam"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="basic_salary" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="basic_salary"/>
+        <property name="com.jaspersoft.studio.field.label" value="basic_salary"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="chargeable_pay" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="chargeable_pay"/>
+        <property name="com.jaspersoft.studio.field.label" value="chargeable_pay"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="created_at" class="java.sql.Timestamp">
+        <property name="com.jaspersoft.studio.field.name" value="created_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="created_at"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="dcrs_actual_e2" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="dcrs_actual_e2"/>
+        <property name="com.jaspersoft.studio.field.label" value="dcrs_actual_e2"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="dcrs_e1" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="dcrs_e1"/>
+        <property name="com.jaspersoft.studio.field.label" value="dcrs_e1"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="dcrs_fixed_e3" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="dcrs_fixed_e3"/>
+        <property name="com.jaspersoft.studio.field.label" value="dcrs_fixed_e3"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="deleted" class="java.lang.Boolean">
+        <property name="com.jaspersoft.studio.field.name" value="deleted"/>
+        <property name="com.jaspersoft.studio.field.label" value="deleted"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="deleted_at" class="java.sql.Timestamp">
+        <property name="com.jaspersoft.studio.field.name" value="deleted_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="deleted_at"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="department_id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="department_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="department_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="employee_id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="employee_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="employee_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="gross_pay" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="gross_pay"/>
+        <property name="com.jaspersoft.studio.field.label" value="gross_pay"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="helb_deductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="helb_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="helb_deductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="is_commited" class="java.lang.Boolean">
+        <property name="com.jaspersoft.studio.field.name" value="is_commited"/>
+        <property name="com.jaspersoft.studio.field.label" value="is_commited"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="leave_deduction" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="leave_deduction"/>
+        <property name="com.jaspersoft.studio.field.label" value="leave_deduction"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="month" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="month"/>
+        <property name="com.jaspersoft.studio.field.label" value="month"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="net_pay" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="net_pay"/>
+        <property name="com.jaspersoft.studio.field.label" value="net_pay"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="nhif_deductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="nhif_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="nhif_deductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="nssf_deductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="nssf_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="nssf_deductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="owner_occupied_interests" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="owner_occupied_interests"/>
+        <property name="com.jaspersoft.studio.field.label" value="owner_occupied_interests"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="paid" class="java.lang.Boolean">
+        <property name="com.jaspersoft.studio.field.name" value="paid"/>
+        <property name="com.jaspersoft.studio.field.label" value="paid"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="paye_deductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="paye_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="paye_deductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="pension" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="pension"/>
+        <property name="com.jaspersoft.studio.field.label" value="pension"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="relief_insurance" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="relief_insurance"/>
+        <property name="com.jaspersoft.studio.field.label" value="relief_insurance"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="relief_personal" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="relief_personal"/>
+        <property name="com.jaspersoft.studio.field.label" value="relief_personal"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="retirement_and_owner_occupied_interests" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="retirement_and_owner_occupied_interests"/>
+        <property name="com.jaspersoft.studio.field.label" value="retirement_and_owner_occupied_interests"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="sacco_contributions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="sacco_contributions"/>
+        <property name="com.jaspersoft.studio.field.label" value="sacco_contributions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="tax_charged" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="tax_charged"/>
+        <property name="com.jaspersoft.studio.field.label" value="tax_charged"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="taxable_income" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="taxable_income"/>
+        <property name="com.jaspersoft.studio.field.label" value="taxable_income"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="total_non_cash_benefit" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="total_non_cash_benefit"/>
+        <property name="com.jaspersoft.studio.field.label" value="total_non_cash_benefit"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="total_relief" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="total_relief"/>
+        <property name="com.jaspersoft.studio.field.label" value="total_relief"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="updated_at" class="java.sql.Timestamp">
+        <property name="com.jaspersoft.studio.field.name" value="updated_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="value_of_quarters" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="value_of_quarters"/>
+        <property name="com.jaspersoft.studio.field.label" value="value_of_quarters"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="year" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="year"/>
+        <property name="com.jaspersoft.studio.field.label" value="year"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <variable name="Sum_Basic_Salary" class="java.math.BigDecimal" calculation="Sum">
+        <variableExpression><![CDATA[$F{basic_salary}]]></variableExpression>
+    </variable>
+    <variable name="Sum_PAYE" class="java.math.BigDecimal" calculation="Sum">
+        <variableExpression><![CDATA[$F{paye_deductions}]]></variableExpression>
+    </variable>
+    <variable name="Sum_NHIF" class="java.math.BigDecimal" calculation="Sum">
+        <variableExpression><![CDATA[$F{nhif_deductions}]]></variableExpression>
+    </variable>
+    <variable name="Sum_NSSF" class="java.math.BigDecimal" calculation="Sum">
+        <variableExpression><![CDATA[$F{nssf_deductions}]]></variableExpression>
+    </variable>
+    <variable name="Sum_Netpay" class="java.math.BigDecimal" calculation="Sum">
+        <variableExpression><![CDATA[$F{net_pay}]]></variableExpression>
+    </variable>
+    <variable name="Counter" class="java.lang.Integer" calculation="Count">
+        <initialValueExpression><![CDATA[1]]></initialValueExpression>
+    </variable>
+    <group name="Group1">
+        <groupFooter>
+            <band height="30">
+                <staticText>
+                    <reportElement mode="Opaque" x="-10" y="0" width="224" height="30" forecolor="#030000" backcolor="#CFCFCF" uuid="cf4631a7-346e-48be-9880-f815903e3a42">
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <box>
+                        <pen lineWidth="0.25"/>
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                    </box>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font fontName="DejaVu Sans" size="11" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Gross Totals of the month  (Ksh)]]></text>
+                </staticText>
+                <textField pattern="#,##0.00#;(#,##0.00#-)">
+                    <reportElement mode="Opaque" x="214" y="0" width="45" height="30" backcolor="#CFCFCF" uuid="f881297a-ff3e-43b4-bfd2-f774f40159c8">
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    </reportElement>
+                    <box bottomPadding="2" rightPadding="5">
+                        <pen lineWidth="0.25"/>
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    </box>
+                    <textElement textAlignment="Right" verticalAlignment="Bottom">
+                        <font size="6"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$V{Sum_Basic_Salary}]]></textFieldExpression>
+                </textField>
+                <textField pattern="#,##0.00#;(#,##0.00#-)">
+                    <reportElement mode="Opaque" x="259" y="0" width="47" height="30" backcolor="#CFCFCF" uuid="7301abef-dde2-47c0-b7da-ee550b981e75">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    </reportElement>
+                    <box bottomPadding="2" rightPadding="5">
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                    </box>
+                    <textElement textAlignment="Right" verticalAlignment="Bottom">
+                        <font size="6"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$V{Sum_PAYE}]]></textFieldExpression>
+                </textField>
+                <textField pattern="#,##0.00#;(#,##0.00#-)">
+                    <reportElement mode="Opaque" x="306" y="0" width="48" height="30" backcolor="#CFCFCF" uuid="25854376-6c84-4d2a-986a-c717c3c20a53">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    </reportElement>
+                    <box bottomPadding="2" rightPadding="5">
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                    </box>
+                    <textElement textAlignment="Right" verticalAlignment="Bottom">
+                        <font size="6"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$V{Sum_NHIF}]]></textFieldExpression>
+                </textField>
+                <textField pattern="#,##0.00#;(#,##0.00#-)">
+                    <reportElement mode="Opaque" x="354" y="0" width="48" height="30" backcolor="#CFCFCF" uuid="2ae3eb5a-b413-4c38-88d5-2b7e266d21b4">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    </reportElement>
+                    <box bottomPadding="2" rightPadding="5">
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#030000"/>
+                    </box>
+                    <textElement textAlignment="Right" verticalAlignment="Bottom">
+                        <font size="6"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$V{Sum_NSSF}]]></textFieldExpression>
+                </textField>
+                <textField pattern="#,##0.00#;(#,##0.00#-)">
+                    <reportElement mode="Opaque" x="400" y="0" width="155" height="30" backcolor="#CFCFCF" uuid="5a7820bd-5680-4bc8-8fba-0b102b632e7a">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    </reportElement>
+                    <box bottomPadding="2" rightPadding="5">
+                        <topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                        <rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    </box>
+                    <textElement textAlignment="Right" verticalAlignment="Bottom">
+                        <font size="6"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$V{Sum_Netpay}]]></textFieldExpression>
+                </textField>
+            </band>
+        </groupFooter>
+    </group>
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="102">
+            <staticText>
+                <reportElement mode="Transparent" x="95" y="-1" width="185" height="25" forecolor="#0522FF" uuid="e43670ff-0b79-4807-b98f-a53141bea01a">
+                    <property name="local_mesure_unitheight" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="DejaVu Sans" size="19" isBold="true"/>
+                </textElement>
+                <text><![CDATA[E & M Tech ltd]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="95" y="55" width="185" height="15" uuid="17dc737d-e510-41df-a726-9afb97c24b7a"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <text><![CDATA[Tel: +254 722 582 328]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="95" y="24" width="185" height="15" uuid="f30f1420-adb6-4f02-b67f-70dd47c68857"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <text><![CDATA[P.O BOX 11001 - 00100]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="95" y="39" width="185" height="15" uuid="167592a8-167f-48a0-87ce-cde29bedfa6c"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <text><![CDATA[Muthaiga Square, Nairobi, Kenya]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="96" y="72" width="184" height="15" uuid="e2f460f8-f111-4df4-8276-8c78d0817f9d"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <text><![CDATA[MAIL: info@emtechhouse.co.ke]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="0" width="174" height="30" uuid="15fc398b-1dcc-43f1-b6b0-bc541ebbc173"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="19" isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Monthly Report]]></text>
+            </staticText>
+            <image>
+                <reportElement x="-1" y="0" width="91" height="87" uuid="b3d9b139-978a-4175-a75a-5c3ad37f92f6"/>
+                <box padding="0"/>
+                <imageExpression><![CDATA["e&m-logo.png"]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="381" y="29" width="46" height="20" uuid="88d167b8-04bb-4b62-a0da-50a9a797b64e"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Year:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="427" y="30" width="100" height="18" uuid="da76be99-6d32-4bbe-bb8d-c8e63df4e2f2"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="380" y="53" width="47" height="18" uuid="1ac2530d-ff15-4889-a17d-87a533df4cad"/>
+                <textElement>
+                    <font fontName="DejaVu Sans" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Month:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="450" y="68" width="100" height="22" uuid="7281f9c0-aff5-4285-893f-aa897b8cdc3b"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Department_Name}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="382" y="70" width="68" height="18" uuid="415376ee-74a9-484c-9c1b-a1c9f4c9ac21"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <text><![CDATA[Department:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="427" y="49" width="84" height="18" uuid="e28612e2-6678-41e9-9a8f-3ea2b9b64f31"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{month}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="1">
+            <line>
+                <reportElement x="-20" y="0" width="593" height="1" uuid="357d1bdd-9333-4103-9a3f-e53d179d5f48">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineWidth="5.0" lineStyle="Double"/>
+                </graphicElement>
+            </line>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="25">
+            <staticText>
+                <reportElement mode="Opaque" x="10" y="5" width="33" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="afa3e6a2-bc58-4bba-b7d3-4d7b71414f9d">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[EIN Code]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="43" y="5" width="106" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="071dc4bd-2738-4010-8283-eb383c578ffb">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Employee Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="450" y="5" width="55" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="fa96f20a-601e-42e5-a991-67052aff2104">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Month]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="214" y="5" width="45" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="e2365fad-c953-43ae-a427-eb8be401892b">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Basic Salary]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="258" y="5" width="48" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="8f9865c2-5452-4918-9914-d2049f8876a3">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[PAYE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="306" y="5" width="48" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="686c4574-9936-4f77-adcb-0d4fb6c25621">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[NHIF]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="354" y="5" width="48" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="e429d8af-ca94-4b84-b556-ff208d4a77d4">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[NSSF]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="402" y="5" width="48" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="55bde355-6969-4fb6-a9aa-ea167a44e0bb">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Net Pay]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="149" y="5" width="65" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="648d6bb8-d42a-4184-8543-535e8f1a8cbd">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Occupation]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="-10" y="5" width="20" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="bd77be11-eaaf-4e7c-be12-35a48c4a3ba0">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[No.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="505" y="5" width="50" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="0e25890d-227d-4b86-ab73-942deb4e8f57">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="DejaVu Sans" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Created On]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="15">
+            <textField>
+                <reportElement x="43" y="0" width="106" height="15" uuid="505e77f6-7b19-4783-916c-294270bccdea">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <box leftPadding="5" bottomPadding="2">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement verticalAlignment="Bottom">
+                    <font fontName="DejaVu Sans" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{first_name} + " "+ $F{middle_name}+" "+$F{last_name}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="214" y="0" width="45" height="15" uuid="bec670d0-a3c3-491f-85f4-2787d241ef0b">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box leftPadding="0" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{basic_salary}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="258" y="0" width="48" height="15" uuid="42311546-6687-4ad0-81e2-188286e586e3">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box leftPadding="0" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{paye_deductions}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="306" y="0" width="48" height="15" uuid="6e85ca63-95a1-445b-adeb-3994edd71d7a">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box leftPadding="0" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nhif_deductions}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="354" y="0" width="48" height="15" uuid="652c3cdd-c327-4fb1-a6c3-14af649b4520">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box leftPadding="0" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nssf_deductions}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="402" y="0" width="48" height="15" uuid="7dbc61d7-25db-4d08-a13e-8daa9773c021">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <box leftPadding="0" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{net_pay}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="0" width="33" height="15" uuid="977783ab-7bf9-4e3f-8be5-1a8722cc8441">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box leftPadding="2" bottomPadding="2">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Justified" verticalAlignment="Bottom">
+                    <font size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{employee_id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="-10" y="0" width="20" height="15" uuid="0c0b2e5b-8634-4e51-854c-b65d86c7a533">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Bottom">
+                    <font size="6" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="505" y="0" width="50" height="15" uuid="824dfb42-c070-4822-954a-fac9acb3538f">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box leftPadding="5" bottomPadding="2">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Bottom">
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{created_at}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="450" y="0" width="55" height="15" uuid="a862429e-2742-40de-a862-5bb8c9124677">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box leftPadding="5" bottomPadding="2">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Bottom">
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.00#;(#,##0.00#-)">
+                <reportElement x="149" y="0" width="65" height="15" uuid="bb8d3fcc-1177-4c63-8f06-3fa988968c5b">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <box leftPadding="1" bottomPadding="2" rightPadding="5">
+                    <pen lineWidth="0.25" lineColor="#FF0905"/>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Bottom">
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{job_group}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="17">
+            <textField>
+                <reportElement mode="Opaque" x="-10" y="4" width="525" height="13" backcolor="#E6E6E6" uuid="910f0425-4803-46a3-9246-df0e88ac8f83"/>
+                <textElement textAlignment="Right">
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="7b3c8e46-d367-4ef0-a863-f40373588dbd"/>
+                <textElement>
+                    <font fontName="DejaVu Sans"/>
+                </textElement>
+                <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="-11" y="4" width="91" height="13" uuid="90a6a1d6-c5dc-4050-b5a3-9284fb1b08a2">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <text><![CDATA[Generated on:]]></text>
+            </staticText>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="81" y="4" width="180" height="13" uuid="e4db9826-57d0-4cb2-95bc-593f81f41711">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>

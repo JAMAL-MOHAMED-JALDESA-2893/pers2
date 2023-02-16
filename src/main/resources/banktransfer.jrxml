@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="banktransfer" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17741dbb-a135-4a90-86ff-5d8e3158a8c8">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+    <queryString language="SQL">
+        <![CDATA[SELECT employee_entity.id AS EmployeeId,employee_entity.national_id as NationalId, employee_entity.job_group as JobGroup, employee_entity.gross_pay as GrossPay, employee_entity.first_name AS FirstName, employee_entity.middle_name AS MiddleName, employee_entity.last_name as LastName, employee_entity.personal_phone AS PersonalPhone, employee_entity.bank_account AS BankAccount, employee_entity.bank_name AS BankName, employee_entity.kra_no as KraNo, employee_entity.nhif_no as NhifNo, employee_entity.nssf_no as NssfNo, salary.id as SalaryId, salary.paye_deductions as PayeDeductions, salary.nssf_deductions as NssfDeductions,salary.nhif_deductions as NhifDeductions,salary.helb_deductions as HelbDeductions, salary.net_pay as NetPay, salary.created_at as CreatedAt,salary.month as Month,salary.year as Year, salary.paid as Paid from employee_entity LEFT OUTER join salary on employee_entity.id = salary.employee_id]]>
+    </queryString>
+    <field name="EmployeeId" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="EmployeeId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="NationalId" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="national_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="NationalId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="JobGroup" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="job_group"/>
+        <property name="com.jaspersoft.studio.field.label" value="JobGroup"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="GrossPay" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="gross_pay"/>
+        <property name="com.jaspersoft.studio.field.label" value="GrossPay"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="FirstName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="first_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="FirstName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="MiddleName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="middle_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="MiddleName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="LastName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="last_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="LastName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="PersonalPhone" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="personal_phone"/>
+        <property name="com.jaspersoft.studio.field.label" value="PersonalPhone"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="BankAccount" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="bank_account"/>
+        <property name="com.jaspersoft.studio.field.label" value="BankAccount"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="BankName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="bank_name"/>
+        <property name="com.jaspersoft.studio.field.label" value="BankName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="KraNo" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="kra_no"/>
+        <property name="com.jaspersoft.studio.field.label" value="KraNo"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="NhifNo" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="nhif_no"/>
+        <property name="com.jaspersoft.studio.field.label" value="NhifNo"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="NssfNo" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="nssf_no"/>
+        <property name="com.jaspersoft.studio.field.label" value="NssfNo"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="employee_entity"/>
+    </field>
+    <field name="SalaryId" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="SalaryId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="PayeDeductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="paye_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="PayeDeductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="NssfDeductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="nssf_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="NssfDeductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="NhifDeductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="nhif_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="NhifDeductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="HelbDeductions" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="helb_deductions"/>
+        <property name="com.jaspersoft.studio.field.label" value="HelbDeductions"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="NetPay" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="net_pay"/>
+        <property name="com.jaspersoft.studio.field.label" value="NetPay"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="CreatedAt" class="java.sql.Timestamp">
+        <property name="com.jaspersoft.studio.field.name" value="created_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="CreatedAt"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+    </field>
+    <field name="Month" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="month"/>
+        <property name="com.jaspersoft.studio.field.label" value="Month"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="Year" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="year"/>
+        <property name="com.jaspersoft.studio.field.label" value="Year"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="Paid" class="java.lang.Boolean">
+        <property name="com.jaspersoft.studio.field.name" value="paid"/>
+        <property name="com.jaspersoft.studio.field.label" value="Paid"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <group name="Group1">
+        <groupExpression><![CDATA[$F{EmployeeId}]]></groupExpression>
+        <groupFooter>
+            <band/>
+        </groupFooter>
+    </group>
+    <group name="Group2">
+        <groupExpression><![CDATA[$F{NationalId}]]></groupExpression>
+        <groupFooter>
+            <band/>
+        </groupFooter>
+    </group>
+    <group name="Group3">
+        <groupExpression><![CDATA[$F{JobGroup}]]></groupExpression>
+        <groupFooter>
+            <band/>
+        </groupFooter>
+    </group>
+    <group name="Group4">
+        <groupExpression><![CDATA[$F{GrossPay}]]></groupExpression>
+        <groupFooter>
+            <band/>
+        </groupFooter>
+    </group>
+    <group name="FirstName">
+        <groupExpression><![CDATA[$F{FirstName}]]></groupExpression>
+    </group>
+    <group name="MiddleName">
+        <groupExpression><![CDATA[$F{MiddleName}]]></groupExpression>
+    </group>
+    <group name="LastName">
+        <groupExpression><![CDATA[$F{LastName}]]></groupExpression>
+    </group>
+    <group name="PersonalPhone">
+        <groupExpression><![CDATA[$F{PersonalPhone}]]></groupExpression>
+    </group>
+    <group name="BankAccount">
+        <groupExpression><![CDATA[$F{BankAccount}]]></groupExpression>
+    </group>
+    <group name="BankName">
+        <groupExpression><![CDATA[$F{BankName}]]></groupExpression>
+    </group>
+    <group name="KraNo">
+        <groupExpression><![CDATA[$F{KraNo}]]></groupExpression>
+    </group>
+    <group name="NhifNo">
+        <groupExpression><![CDATA[$F{NhifNo}]]></groupExpression>
+    </group>
+    <group name="NssfNo">
+        <groupExpression><![CDATA[$F{NssfNo}]]></groupExpression>
+    </group>
+    <group name="SalaryId">
+        <groupExpression><![CDATA[$F{SalaryId}]]></groupExpression>
+    </group>
+    <group name="PayeDeductions">
+        <groupExpression><![CDATA[$F{PayeDeductions}]]></groupExpression>
+    </group>
+    <group name="NssfDeductions">
+        <groupExpression><![CDATA[$F{NssfDeductions}]]></groupExpression>
+    </group>
+    <group name="NhifDeductions">
+        <groupExpression><![CDATA[$F{NhifDeductions}]]></groupExpression>
+    </group>
+    <group name="HelbDeductions">
+        <groupExpression><![CDATA[$F{HelbDeductions}]]></groupExpression>
+    </group>
+    <group name="NetPay">
+        <groupExpression><![CDATA[$F{NetPay}]]></groupExpression>
+    </group>
+    <group name="CreatedAt">
+        <groupExpression><![CDATA[$F{CreatedAt}]]></groupExpression>
+    </group>
+    <group name="Month">
+        <groupExpression><![CDATA[$F{Month}]]></groupExpression>
+    </group>
+    <group name="Year">
+        <groupExpression><![CDATA[$F{Year}]]></groupExpression>
+    </group>
+    <group name="Paid">
+        <groupExpression><![CDATA[$F{Paid}]]></groupExpression>
+    </group>
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="72">
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d1aa66c5-395b-47c5-acfb-bf18d49303cf"/>
+                <staticText>
+                    <reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="04a3beef-d9e3-4a0e-830e-ccc28baabeb3"/>
+                    <textElement>
+                        <font size="34" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[TITLE]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="0207e675-b612-4f34-b653-2e724fc701bd"/>
+                    <textElement textAlignment="Right">
+                        <font size="14" isBold="false"/>
+                    </textElement>
+                    <text><![CDATA[Add a description here]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="13"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="21">
+            <line>
+                <reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="2dbf3db2-4655-4b25-b4e7-2db909e8478b"/>
+            </line>
+            <staticText>
+                <reportElement x="0" y="0" width="50" height="20" uuid="1fb6c7fc-d7c5-454b-980e-3d928f27e82a"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[EID Code]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="50" y="0" width="90" height="20" uuid="2aca2b46-5329-4d4d-8bf3-1ba6b06bc415"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Employee Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="141" y="0" width="90" height="20" uuid="b039b755-d965-4972-b1fb-acf82cd2d9e7"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Grosspay]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="230" y="0" width="90" height="20" uuid="bf9d0762-ff8c-4f56-b7a1-5acaf122e783"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Netpay]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="24">
+            <textField>
+                <reportElement x="0" y="-1" width="50" height="20" uuid="bc27c13d-65b2-46f8-858d-f4ecbb60ab0a"/>
+                <textElement textAlignment="Center" verticalAlignment="Bottom"/>
+                <textFieldExpression><![CDATA[$F{EmployeeId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="50" y="0" width="90" height="18" uuid="3df25802-56a8-4990-8ce1-fa42c5315edb"/>
+                <textElement textAlignment="Left" verticalAlignment="Bottom"/>
+                <textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.###;(#,##0.###-)">
+                <reportElement x="140" y="1" width="90" height="18" uuid="59ba9dd3-10fe-48fa-a7e5-3e52564a5bd0"/>
+                <textElement textAlignment="Left" verticalAlignment="Bottom"/>
+                <textFieldExpression><![CDATA[$F{GrossPay}]]></textFieldExpression>
+            </textField>
+            <textField pattern="#,##0.###;(#,##0.###-)">
+                <reportElement x="230" y="1" width="90" height="18" uuid="c50ce161-f1ce-477d-9ae5-24a08b5a4f38"/>
+                <textElement textAlignment="Left" verticalAlignment="Bottom"/>
+                <textFieldExpression><![CDATA[$F{NetPay}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band/>
+    </columnFooter>
+    <pageFooter>
+        <band height="17">
+            <textField>
+                <reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c6176c90-6ff2-45ff-82a9-292c852e3d01"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="3ff8508e-4bcf-4692-ad96-a8f0b14cec39"/>
+                <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement x="0" y="4" width="100" height="13" uuid="5e59be68-f6c9-4058-83bd-82c2a891da85"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>
